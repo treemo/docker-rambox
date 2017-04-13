@@ -1,7 +1,7 @@
 # install
 
 ```
-mkdir -p $HOME/docker-data/rambox/config $HOME/docker-data/rambox/data
+mkdir -p $HOME/docker-data/rambox/config $HOME/docker-data/rambox/share
 docker run \
         -d \
         -e LANG \
@@ -10,7 +10,7 @@ docker run \
         -e DISPLAY \
         -v /tmp/.X11-unix:/tmp/.X11-unix:ro \
         -v $HOME/docker-data/rambox/config:/home/user/.config/Rambox \
-        -v $HOME/docker-data/rambox/data:/home/user/docker \
+        -v $HOME/docker-data/rambox/share:/home/user/docker \
         --name rambox \
         treemo/rambox
 ```
