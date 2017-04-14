@@ -1,0 +1,14 @@
+version: '2'
+
+services:
+  rambox:
+    image: treemo/rambox
+    volumes:
+      - /tmp/.X11-unix:/tmp/.X11-unix:ro
+      - ./config:/home/user/.config/Rambox
+      - ./share:/home/user/share
+    environment:
+      - LANG
+      - LANGUAGE
+      - LC_ALL
+      - DISPLAY
